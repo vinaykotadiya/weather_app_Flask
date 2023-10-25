@@ -31,10 +31,10 @@ def get_weatherdata():
 
         if response.status_code == 200:
             data = response.json()
-            # city_name = data.get('name')
-            # temperature = data['main']['temp']
-            # weather_description = data['weather'][0]['description']
-            # return f"Weather in {city_name}: {weather_description}, Temperature: {temperature}°C"
+            city_name = data.get('name')
+            temperature = data['main']['temp']
+            weather_description = data['weather'][0]['description']
+            return f"Weather in {city_name}: {weather_description}, Temperature: {temperature}°C"
             return f"city :{city}"
         else:
             return "Failed to fetch weather data. Please check your input and API key."
